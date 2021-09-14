@@ -5,4 +5,8 @@
 
 [![lint](https://github.com/alex-vo/frontend-project-lvl1/actions/workflows/main.yml/badge.svg)](https://github.com/alex-vo/frontend-project-lvl1/actions/workflows/main.yml)
 
+brain-even demo
 [![asciicast](https://asciinema.org/a/YpRFZCwX7qD6LeGbjoGnKMXui.svg)](https://asciinema.org/a/YpRFZCwX7qD6LeGbjoGnKMXui)
+
+brain-calc demo
+[![asciicast](https://asciinema.org/a/435698.svg)](https://asciinema.org/a/435698)
