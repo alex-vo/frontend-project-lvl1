@@ -10,3 +10,6 @@ brain-even demo
 
 brain-calc demo
 [![asciicast](https://asciinema.org/a/435702.svg)](https://asciinema.org/a/435702)
+
+brain-gcd demo
+[![asciicast](https://asciinema.org/a/435709.svg)](https://asciinema.org/a/435709)
