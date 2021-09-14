@@ -18,14 +18,14 @@ export default (introMessage, nextQuestion) => {
       console.log('Correct!');
       correctAnswers++;
     } else {
-      console.log('\'' + answer + '\' is wrong answer ;(. Correct answer was \'' + question.correctAnswer + '\'.');
-      console.log('Let\'s try again, ' + name + '!');
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${question.correctAnswer}'.`);
+      console.log(`Let's try again, ${name}!`);
       break;
     }
   }
 
   if (correctAnswers >= winningCorrectAnswerAmount) {
-    console.log('Congratulations, ' + name + '!');
+    console.log(`Congratulations, ${name}!`);
   }
 
 
