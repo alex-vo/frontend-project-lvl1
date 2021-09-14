@@ -1,6 +1,8 @@
 import greet from './cli.js';
 import readlineSync from 'readline-sync';
 
+const winningCorrectAnswerAmount = 3;
+
 export default (introMessage, nextQuestion) => {
     const name = greet();
 
@@ -8,7 +10,7 @@ export default (introMessage, nextQuestion) => {
 
     let correctAnswers = 0;
 
-    while (correctAnswers < 3) {
+    while (correctAnswers < winningCorrectAnswerAmount) {
         const question = nextQuestion();
         console.log(question.question);
         const answer = readlineSync.question('Your answer: ');
@@ -22,7 +24,7 @@ export default (introMessage, nextQuestion) => {
         }
     }
 
-    if(correctAnswers >= 3) {
+    if(correctAnswers >= winningCorrectAnswerAmount) {
         console.log('Congratulations, ' + name + '!');
     }
 
