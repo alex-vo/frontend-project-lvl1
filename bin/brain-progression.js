@@ -10,7 +10,7 @@ playGame('What number is missing in the progression?', () => {
   const step = Math.floor(Math.random() * number2UpperBound);
   const numberCount = Math.floor(Math.random() * 5) + 5;
   const hiddenNumber = Math.floor(Math.random() * numberCount);
-  let question = ['Question:'];
+  const question = ['Question:'];
   for (let i = 0; i < numberCount; i += 1) {
     if (i === hiddenNumber) {
       question.push('..');

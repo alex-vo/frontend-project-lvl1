@@ -1,5 +1,5 @@
-import greet from './cli.js';
 import readlineSync from 'readline-sync';
+import greet from './cli.js';
 
 const winningCorrectAnswerAmount = 3;
 
@@ -16,7 +16,7 @@ export default (introMessage, nextQuestion) => {
     const answer = readlineSync.question('Your answer: ');
     if (question.correctAnswer === answer.toLowerCase()) {
       console.log('Correct!');
-      correctAnswers++;
+      correctAnswers += 1;
     } else {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${question.correctAnswer}'.`);
       console.log(`Let's try again, ${name}!`);
@@ -27,6 +27,4 @@ export default (introMessage, nextQuestion) => {
   if (correctAnswers >= winningCorrectAnswerAmount) {
     console.log(`Congratulations, ${name}!`);
   }
-
-
-}
+};
