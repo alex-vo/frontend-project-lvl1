@@ -4,29 +4,29 @@ import readlineSync from 'readline-sync';
 const winningCorrectAnswerAmount = 3;
 
 export default (introMessage, nextQuestion) => {
-    const name = greet();
+  const name = greet();
 
-    console.log(introMessage);
+  console.log(introMessage);
 
-    let correctAnswers = 0;
+  let correctAnswers = 0;
 
-    while (correctAnswers < winningCorrectAnswerAmount) {
-        const question = nextQuestion();
-        console.log(question.question);
-        const answer = readlineSync.question('Your answer: ');
-        if(question.correctAnswer === answer.toLowerCase()) {
-            console.log('Correct!');
-            correctAnswers++;
-        } else {
-            console.log('\'' + answer + '\' is wrong answer ;(. Correct answer was \'' + question.correctAnswer + '\'.');
-            console.log('Let\'s try again, ' + name + '!');
-            break;
-        }
+  while (correctAnswers < winningCorrectAnswerAmount) {
+    const question = nextQuestion();
+    console.log(question.question);
+    const answer = readlineSync.question('Your answer: ');
+    if (question.correctAnswer === answer.toLowerCase()) {
+      console.log('Correct!');
+      correctAnswers++;
+    } else {
+      console.log('\'' + answer + '\' is wrong answer ;(. Correct answer was \'' + question.correctAnswer + '\'.');
+      console.log('Let\'s try again, ' + name + '!');
+      break;
     }
+  }
 
-    if(correctAnswers >= winningCorrectAnswerAmount) {
-        console.log('Congratulations, ' + name + '!');
-    }
+  if (correctAnswers >= winningCorrectAnswerAmount) {
+    console.log('Congratulations, ' + name + '!');
+  }
 
 
 }
