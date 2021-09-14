@@ -16,3 +16,6 @@ brain-gcd demo
 
 brain-progression demo
 [![asciicast](https://asciinema.org/a/435711.svg)](https://asciinema.org/a/435711)
+
+brain-prime demo
+[![asciicast](https://asciinema.org/a/435715.svg)](https://asciinema.org/a/435715)
