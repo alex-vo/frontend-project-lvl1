@@ -12,7 +12,6 @@ export default (introMessage, nextQuestion) => {
         const question = nextQuestion();
         console.log(question.question);
         const answer = readlineSync.question('Your answer: ');
-        console.log('answer type ' + typeof answer);
         if(question.correctAnswer === answer.toLowerCase()) {
             console.log('Correct!');
             correctAnswers++;

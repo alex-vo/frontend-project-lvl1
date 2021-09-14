@@ -11,7 +11,6 @@ playGame('What is the result of the expression?', () => {
     const formula = '' + number1 + ' ' + operations[operationIndex] + ' ' + number2;
     const question = 'Question: ' + formula;
     const correctAnswer = '' + eval(formula);
-    console.log('correctAnswer type ' + typeof correctAnswer);
 
     return {
         question,
