@@ -9,4 +9,4 @@ brain-even demo
 [![asciicast](https://asciinema.org/a/YpRFZCwX7qD6LeGbjoGnKMXui.svg)](https://asciinema.org/a/YpRFZCwX7qD6LeGbjoGnKMXui)
 
 brain-calc demo
-[![asciicast](https://asciinema.org/a/435698.svg)](https://asciinema.org/a/435698)
+[![asciicast](https://asciinema.org/a/435702.svg)](https://asciinema.org/a/435702)
