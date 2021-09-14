@@ -13,3 +13,6 @@ brain-calc demo
 
 brain-gcd demo
 [![asciicast](https://asciinema.org/a/435709.svg)](https://asciinema.org/a/435709)
+
+brain-progression demo
+[![asciicast](https://asciinema.org/a/435711.svg)](https://asciinema.org/a/435711)
