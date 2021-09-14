@@ -10,12 +10,24 @@ playGame('What is the result of the expression?', () => {
   const number1 = Math.floor(Math.random() * number1UpperBound);
   const number2 = Math.floor(Math.random() * number2UpperBound);
   const operationIndex = Math.floor(Math.random() * operations.length);
-  const formula = `${number1} ${operations[operationIndex]} ${number2}`;
-  const question = `Question: ${formula}`;
-  const correctAnswer = `${eval(formula)}`;
+  const question = `Question: ${number1} ${operations[operationIndex]} ${number2}`;
+  let correctAnswer;
+  switch (operationIndex) {
+    case 0:
+      correctAnswer = number1 + number2;
+      break;
+    case 1:
+      correctAnswer = number1 - number2;
+      break;
+    case 2:
+      correctAnswer = number1 * number2;
+      break;
+    default:
+      break;
+  }
 
   return {
     question,
-    correctAnswer,
+    correctAnswer: `${correctAnswer}`,
   };
 });
