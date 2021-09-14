@@ -5,4 +5,4 @@
 
 [![lint](https://github.com/alex-vo/frontend-project-lvl1/actions/workflows/main.yml/badge.svg)](https://github.com/alex-vo/frontend-project-lvl1/actions/workflows/main.yml)
 
-https://asciinema.org/a/YpRFZCwX7qD6LeGbjoGnKMXui
+[![asciicast](https://asciinema.org/a/YpRFZCwX7qD6LeGbjoGnKMXui.svg)](https://asciinema.org/a/YpRFZCwX7qD6LeGbjoGnKMXui)
