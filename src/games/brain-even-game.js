@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 import playGame from '../index.js';
 import even from '../util/even.js';
 import random from '../util/random.js';
