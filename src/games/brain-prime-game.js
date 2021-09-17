@@ -3,6 +3,7 @@ import even from '../util/even.js';
 import random from '../util/random.js';
 
 const isPrime = (n) => {
+  if (n === 0) return false;
   if (n < 4) return true;
   if (even(n)) return false;
 
