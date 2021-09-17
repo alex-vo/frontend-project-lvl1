@@ -1,13 +1,8 @@
 import readlineSync from 'readline-sync';
-import greet from './cli.js';
 
 const maxCorrectCount = 3;
 
-export default (introMessage, getNextQuestion) => {
-  const name = greet();
-
-  console.log(introMessage);
-
+export default (name, getNextQuestion) => {
   let correctAnswers = 0;
 
   while (correctAnswers < maxCorrectCount) {
