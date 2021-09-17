@@ -1,8 +1,7 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
-  "description": "[![Actions Status](https://github.com/alex-vo/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/alex-vo/frontend-project-lvl1/actions)",
-  "main": "index.js",
+  "description": "Console brain games",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,7 +9,8 @@
     "type": "git",
     "url": "git+https://github.com/alex-vo/frontend-project-lvl1.git"
   },
-  "author": "",
+  "author": "Aleksei Vorontsov",
+  "keywords": ["brain", "game", "games"],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/alex-vo/frontend-project-lvl1/issues"
