@@ -1,6 +1,9 @@
 install:
 	npm i
 
+clean-install:
+	npm ci
+
 brain-calc:
 	node bin/brain-calc.js
 
