@@ -31,5 +31,5 @@ export default () => playGame(
       question,
       correctAnswer: `${correctAnswer}`,
     };
-  }
+  },
 );
