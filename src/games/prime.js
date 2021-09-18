@@ -4,8 +4,7 @@ import isEven from '../utils/even.js';
 import generateRandomNumber from '../utils/random.js';
 
 const isPrime = (n) => {
-  if (n === 0 || n === 1) return false;
-  if (n < 4) return true;
+  if (n < 2) return false;
   if (isEven(n)) return false;
 
   for (let i = 3; i ** 2 <= n; i += 1) {
@@ -19,7 +18,7 @@ const numberUpperBound = 100;
 
 const createNextQuestion = () => {
   const number = generateRandomNumber(0, numberUpperBound);
-  const questionText = `Question: ${number}`;
+  const questionText = `${number}`;
   const correctAnswer = isPrime(number) ? 'yes' : 'no';
 
   return {

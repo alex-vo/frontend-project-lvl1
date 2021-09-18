@@ -10,7 +10,7 @@ const createNextQuestion = () => {
   const start = generateRandomNumber(0, startUpperBound);
   const step = generateRandomNumber(0, stepUpperBound);
   const hiddenNumber = generateRandomNumber(0, progressionSize);
-  const questionText = ['Question:'];
+  const questionText = [];
   for (let i = 0; i < progressionSize; i += 1) {
     if (i === hiddenNumber) {
       questionText.push('..');

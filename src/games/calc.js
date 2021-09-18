@@ -23,7 +23,7 @@ const createNextQuestion = () => {
   const number1 = generateRandomNumber(0, number1UpperBound);
   const number2 = generateRandomNumber(0, number2UpperBound);
   const operatorIndex = generateRandomNumber(0, operators.length);
-  const questionText = `Question: ${number1} ${operators[operatorIndex]} ${number2}`;
+  const questionText = `${number1} ${operators[operatorIndex]} ${number2}`;
   const correctAnswer = calculate(operatorIndex, number1, number2);
 
   return {

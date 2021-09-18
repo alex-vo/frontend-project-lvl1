@@ -7,7 +7,7 @@ const numberUpperBound = 100;
 
 const createNextQuestion = () => {
   const number = generateRandomNumber(0, numberUpperBound);
-  const questionText = `Question: ${number}`;
+  const questionText = `${number}`;
   const correctAnswer = isEven(number) ? 'yes' : 'no';
   return {
     questionText,

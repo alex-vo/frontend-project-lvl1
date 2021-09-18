@@ -7,7 +7,7 @@ export default (name, getNextQuestion) => {
 
   while (correctAnswers < maxCorrectCount) {
     const { questionText, correctAnswer } = getNextQuestion();
-    console.log(questionText);
+    console.log(`Question: ${questionText}`);
     const answer = readlineSync.question('Your answer: ');
     if (correctAnswer !== answer.toLowerCase()) {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);

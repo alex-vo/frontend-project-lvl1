@@ -16,8 +16,8 @@ const number2UpperBound = 100;
 const createNextQuestion = () => {
   const number1 = generateRandomNumber(0, number1UpperBound);
   const number2 = generateRandomNumber(0, number2UpperBound);
-  const correctAnswer = `${gcd(Math.max(number1, number2), Math.min(number1, number2))}`;
-  const questionText = `Question: ${number1} ${number2}`;
+  const correctAnswer = `${gcd(number1, number2)}`;
+  const questionText = `${number1} ${number2}`;
 
   return {
     questionText,
