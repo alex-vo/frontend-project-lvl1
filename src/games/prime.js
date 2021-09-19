@@ -5,6 +5,7 @@ import generateRandomNumber from '../utils/random.js';
 
 const isPrime = (n) => {
   if (n < 2) return false;
+  if (n === 2) return true;
   if (isEven(n)) return false;
 
   for (let i = 3; i ** 2 <= n; i += 1) {
