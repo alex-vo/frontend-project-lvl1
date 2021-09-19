@@ -9,7 +9,7 @@ const progressionLength = 5;
 const createNextQuestion = () => {
   const start = generateRandomNumber(0, startUpperBound);
   const step = generateRandomNumber(0, stepUpperBound);
-  const hiddenNumber = generateRandomNumber(0, progressionLength);
+  const hiddenNumber = generateRandomNumber(0, progressionLength - 1);
   const questionText = [];
   for (let i = 0; i < progressionLength; i += 1) {
     if (i === hiddenNumber) {
