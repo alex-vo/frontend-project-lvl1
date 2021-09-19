@@ -4,14 +4,14 @@ import generateRandomNumber from '../utils/random.js';
 
 const startUpperBound = 100;
 const stepUpperBound = 10;
-const progressionSize = 5;
+const progressionLength = 5;
 
 const createNextQuestion = () => {
   const start = generateRandomNumber(0, startUpperBound);
   const step = generateRandomNumber(0, stepUpperBound);
-  const hiddenNumber = generateRandomNumber(0, progressionSize);
+  const hiddenNumber = generateRandomNumber(0, progressionLength);
   const questionText = [];
-  for (let i = 0; i < progressionSize; i += 1) {
+  for (let i = 0; i < progressionLength; i += 1) {
     if (i === hiddenNumber) {
       questionText.push('..');
     } else {
