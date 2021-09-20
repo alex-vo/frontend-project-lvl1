@@ -2,7 +2,7 @@ import readlineSync from 'readline-sync';
 
 const maxCorrectCount = 3;
 
-const run = (description, getNextQuestion) => {
+const run = (description, generateRound) => {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
@@ -11,8 +11,8 @@ const run = (description, getNextQuestion) => {
   let correctAnswers = 0;
 
   while (correctAnswers < maxCorrectCount) {
-    const { questionText, correctAnswer } = getNextQuestion();
-    console.log(`Question: ${questionText}`);
+    const { question, correctAnswer } = generateRound();
+    console.log(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');
     if (correctAnswer !== answer.toLowerCase()) {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
