@@ -1,15 +1,12 @@
-import readlineSync from 'readline-sync';
 import playGame from '../index.js';
 import generateRandomNumber from '../utils/random.js';
 
+const description = 'What number is missing in the progression?';
 const startUpperBound = 100;
 const stepUpperBound = 10;
 const progressionLength = 5;
 
-const createNextQuestion = () => {
-  const start = generateRandomNumber(0, startUpperBound);
-  const step = generateRandomNumber(0, stepUpperBound);
-  const hiddenNumber = generateRandomNumber(0, progressionLength - 1);
+const generateQuestion = (start, step, hiddenNumber) => {
   const questionText = [];
   for (let i = 0; i < progressionLength; i += 1) {
     if (i === hiddenNumber) {
@@ -19,22 +16,21 @@ const createNextQuestion = () => {
     }
   }
 
+  return questionText.join(' ');
+};
+
+const generateRound = () => {
+  const start = generateRandomNumber(0, startUpperBound);
+  const step = generateRandomNumber(0, stepUpperBound);
+  const hiddenNumber = generateRandomNumber(0, progressionLength - 1);
+  const question = generateQuestion(start, step, hiddenNumber);
+
   const correctAnswer = `${(start + hiddenNumber * step)}`;
 
   return {
-    questionText: questionText.join(' '),
+    question,
     correctAnswer,
   };
 };
 
-export default () => {
-  console.log('Welcome to the Brain Games!');
-
-  const name = readlineSync.question('May I have your name? ');
-
-  console.log(`Hello, ${name}!`);
-
-  console.log('What number is missing in the progression?');
-
-  playGame(name, createNextQuestion);
-};
+export default () => playGame(description, generateRound);

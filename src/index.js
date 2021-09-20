@@ -2,7 +2,12 @@ import readlineSync from 'readline-sync';
 
 const maxCorrectCount = 3;
 
-export default (name, getNextQuestion) => {
+const run = (description, getNextQuestion) => {
+  console.log('Welcome to the Brain Games!');
+  const name = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${name}!`);
+  console.log(description);
+
   let correctAnswers = 0;
 
   while (correctAnswers < maxCorrectCount) {
@@ -21,3 +26,5 @@ export default (name, getNextQuestion) => {
 
   console.log(`Congratulations, ${name}!`);
 };
+
+export default run;
