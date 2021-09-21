@@ -1,4 +1,4 @@
-import playGame from '../index.js';
+import run from '../index.js';
 import generateRandomNumber from '../utils/random.js';
 
 const description = 'Find the greatest common divisor of given numbers.';
@@ -21,4 +21,4 @@ const generateRound = () => {
     correctAnswer,
   };
 };
-export default () => playGame(description, generateRound);
+export default () => run(description, generateRound);

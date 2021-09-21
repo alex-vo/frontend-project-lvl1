@@ -1,4 +1,4 @@
-import playGame from '../index.js';
+import run from '../index.js';
 import isEven from '../utils/even.js';
 import generateRandomNumber from '../utils/random.js';
 
@@ -14,4 +14,4 @@ const generateRound = () => {
   };
 };
 
-export default () => playGame(description, generateRound);
+export default () => run(description, generateRound);

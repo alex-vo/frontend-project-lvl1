@@ -1,19 +1,19 @@
-import playGame from '../index.js';
+import run from '../index.js';
 import generateRandomNumber from '../utils/random.js';
 
 const description = 'What is the result of the expression?';
 const operators = ['+', '-', '*'];
 
-const calculate = (operatorIndex, number1, number2) => {
-  switch (operatorIndex) {
-    case 0:
+const calculate = (operator, number1, number2) => {
+  switch (operator) {
+    case '+':
       return number1 + number2;
-    case 1:
+    case '-':
       return number1 - number2;
-    case 2:
+    case '*':
       return number1 * number2;
     default:
-      throw Error(`Unexpected operator index: ${operatorIndex}`);
+      throw Error(`Unexpected operator: ${operator}`);
   }
 };
 
@@ -22,7 +22,7 @@ const generateRound = () => {
   const number2 = generateRandomNumber(0, 10);
   const operatorIndex = generateRandomNumber(0, operators.length - 1);
   const question = `${number1} ${operators[operatorIndex]} ${number2}`;
-  const correctAnswer = `${calculate(operatorIndex, number1, number2)}`;
+  const correctAnswer = `${calculate(operators[operatorIndex], number1, number2)}`;
 
   return {
     question,
@@ -30,4 +30,4 @@ const generateRound = () => {
   };
 };
 
-export default () => playGame(description, generateRound);
+export default () => run(description, generateRound);
